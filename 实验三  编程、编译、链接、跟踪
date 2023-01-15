@@ -1,0 +1,18 @@
+assume CS:code
+code segment
+
+	MOV AX,2000H
+	MOV SS,AX
+	MOV sp,0
+	ADD sp,10
+	POP AX
+	POP bx
+	PUSH AX
+	PUSH bx
+	POP AX
+	POP bx
+	
+	MOV AX,4c00h
+	INT 21h
+code ends
+end 
